@@ -772,13 +772,12 @@ endif
 # TODO: remove all code referencing these, and remove override variables
 PRODUCT_FULL_TREBLE := true
 PRODUCT_TREBLE_LINKER_NAMESPACES := true
-PRODUCT_ENFORCE_VINTF_MANIFEST := true
+PRODUCT_ENFORCE_VINTF_MANIFEST := false  # BS-A16 bringup: legacy vendor VINTF fragments
 
 # TODO(b/114488870): disallow PRODUCT_FULL_TREBLE_OVERRIDE from being used.
 .KATI_READONLY := \
     PRODUCT_FULL_TREBLE \
     PRODUCT_TREBLE_LINKER_NAMESPACES \
-    PRODUCT_ENFORCE_VINTF_MANIFEST \
 
 # TODO(b/114488870): remove all sets of these everywhere, and disallow them to be used
 $(KATI_obsolete_var PRODUCT_TREBLE_LINKER_NAMESPACES_OVERRIDE,Deprecated.)
