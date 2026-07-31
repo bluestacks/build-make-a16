@@ -23,6 +23,5 @@ PRODUCT_PACKAGES += \
     EmergencyInfo \
 
 PRODUCT_PACKAGES_SHIPPING_API_LEVEL_34 += \
-    # BlueStacks: on /system via system_image_defaults
-    # hwservicemanager \
+    hwservicemanager \
     android.hidl.allocator@1.0-service \

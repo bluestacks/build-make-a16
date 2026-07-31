@@ -424,9 +424,8 @@ PRODUCT_PACKAGES += \
 # those apexes to continue working. The symlink can be removed once we are sure
 # there are no devices using hwservicemanager (when Android V launching devices
 # are no longer supported for dessert upgrades).
-# BlueStacks: real hwservicemanager on /system via packages.mk / generic/Android.bp.
-# PRODUCT_PACKAGES += \
-#     hwservicemanager_compat_symlink_module \
+PRODUCT_PACKAGES += \
+    hwservicemanager_compat_symlink_module \
 
 PRODUCT_PACKAGES_ARM64 := libclang_rt.hwasan \
  libclang_rt.hwasan.bootstrap \

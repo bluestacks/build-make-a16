@@ -1410,7 +1410,7 @@ ifneq ($(my_outside_includes),)
   ifeq ($(BUILD_BROKEN_OUTSIDE_INCLUDE_DIRS),true)
     $(call pretty-warning,C_INCLUDES must be under the source or output directories: $(my_outside_includes))
   else
-    $(call pretty-warning,C_INCLUDES must be under the source or output directories: $(my_outside_includes))
+    $(call pretty-error,C_INCLUDES must be under the source or output directories: $(my_outside_includes))
   endif
 endif
 

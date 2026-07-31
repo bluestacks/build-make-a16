@@ -28,8 +28,7 @@ PRODUCT_PACKAGES += \
 
 # Base modules when shipping api level is less than or equal to 34
 PRODUCT_PACKAGES_SHIPPING_API_LEVEL_34 += \
-    # BlueStacks: on /system via system_image_defaults
-    # hwservicemanager \
+    hwservicemanager \
     android.hidl.allocator@1.0-service \
     android.hidl.memory@1.0-impl \
 
