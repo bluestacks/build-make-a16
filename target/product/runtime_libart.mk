@@ -127,7 +127,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     pm.dexopt.shared?=speed
 
 ifneq (,$(filter eng,$(TARGET_BUILD_VARIANT)))
+ifneq (true,$(BST_BUILD_WITH_DEXPREOPT))
     OVERRIDE_DISABLE_DEXOPT_ALL ?= true
+endif
 endif
 
 # OVERRIDE_DISABLE_DEXOPT_ALL disables all dexpreopt (build-time) and dexopt (on-device) activities.
