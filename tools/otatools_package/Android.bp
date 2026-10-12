@@ -159,7 +159,6 @@ cc_genrule {
         ":make_f2fs_casefold",
         ":merge_ota",
         ":merge_target_files",
-        "//device/generic/goldfish:mk_combined_img",
         ":mkbootfs",
         ":mkbootimg",
         ":mke2fs",

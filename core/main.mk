@@ -1884,3 +1884,13 @@ $(PRODUCT_OUT)/always_dirty_file.txt:
 $(call dist-write-file,$(KATI_PACKAGE_MK_DIR)/dist.mk)
 
 $(info [$(include_makefiles_total)/$(include_makefiles_total)] writing make module actions ...)
+
+
+# BS-A16-MAC: guest image target for the Mac (polar_mac/HVF) build line.
+# Mirrors the A13-mac qvirtguestimage: system image + ramdisk only. The
+# kernel (kernel-a16 + bst-arm64_defconfig) and the HVF initrd are built by
+# the hd/guest toolchain from the app-player Makefile (initrd_hvf target),
+# so no kernel dependency is wired here.
+.PHONY: qvirtguestimage
+qvirtguestimage: $(INSTALLED_SYSTEMIMAGE_TARGET) $(INSTALLED_RAMDISK_TARGET)
+	@echo "qvirtguestimage: system image and ramdisk ready in $(PRODUCT_OUT)"
